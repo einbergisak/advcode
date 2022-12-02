@@ -1,13 +1,13 @@
 try:
-    elves = []
+    highest = -1
     current = 0
     while True:
         inp = input()
         if inp == "":
-            elves.append(current)
+            if current > highest:
+                highest = current
             current = 0
             continue
         current += int(inp)
 except EOFError:
-    elves.sort(reverse=True)
-    print(elves[0]+elves[1]+elves[2])
+    print(highest)
