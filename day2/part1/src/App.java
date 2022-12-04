@@ -8,40 +8,31 @@ public class App {
             int points = 0;
             while (true) {
                 String line = buf.readLine();
-                if (line == null) {
+                if (line == null)
                     break;
-                }
                 char opponent = line.charAt(0);
-                System.out.println("Opponent: "+opponent);
                 char me = line.charAt(2);
-                System.out.println("Me: "+me);
                 if (me == 'X') {
                     points += 1;
-                    if (opponent == 'A'){
+                    if (opponent == 'A')
                         points += 3;
-                    } else if (opponent == 'C') {
+                    else if (opponent == 'C')
                         points += 6;
-                    }
                 } else if (me == 'Y') {
                     points += 2;
-                    if (opponent == 'B'){
+                    if (opponent == 'B')
                         points += 3;
-                    } else if (opponent == 'A') {
+                    else if (opponent == 'A')
                         points += 6;
-                    }
                 } else {
                     points += 3;
-                    if (opponent == 'C'){
+                    if (opponent == 'C')
                         points += 3;
-                    } else if (opponent == 'B') {
+                    else if (opponent == 'B')
                         points += 6;
-                    }
                 }
-
             }
             System.out.println(points);
         }
-
     }
-
 }

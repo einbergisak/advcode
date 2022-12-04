@@ -3,3 +3,4 @@ target
 *.hi
 *.o
 day4/rust
+*/bin
