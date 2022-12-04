@@ -1,2 +1,5 @@
 target
-.lock
+*.exe
+*.hi
+*.o
+day4/rust
